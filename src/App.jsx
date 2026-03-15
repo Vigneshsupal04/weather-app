@@ -30,7 +30,13 @@ function App() {
       setForecast(groupForecastByDay(forecastData.list));
       setSearchedCity(city);
     } catch (err) {
-      setError("City not found. Please enter a valid city name.");
+      if (err.response?.status === 401) {
+        setError("Invalid API Key. Please check your environment variables.");
+      } else if (err.response?.status === 404) {
+        setError("City not found. Please enter a valid city name.");
+      } else {
+        setError("An error occurred. Please try again later.");
+      }
       setWeather(null);
       setForecast([]);
     } finally {
@@ -62,7 +68,13 @@ function App() {
           setForecast(groupForecastByDay(forecastData.list));
           setSearchedCity(currentData.name);
         } catch (err) {
-          setError("Unable to fetch weather for your location.");
+          if (err.response?.status === 401) {
+            setError(
+              "Invalid API Key. Please check your environment variables.",
+            );
+          } else {
+            setError("Unable to fetch weather for your location.");
+          }
           setWeather(null);
           setForecast([]);
         } finally {
