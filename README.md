@@ -5,10 +5,6 @@ It allows users to search weather by city, use their current location, view the 
 
 ---
 
-## Live Demo
-
-```bash
-https://weather-app-pi-three-67.vercel.app/
 
 Features
 
@@ -38,3 +34,7 @@ Start the development server:
 npm run dev
 Then open the local URL shown in the terminal.
 =======================================================================
+## Live Demo
+
+```bash
+https://weather-app-pi-three-67.vercel.app/
