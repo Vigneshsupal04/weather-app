@@ -3,6 +3,13 @@
 A modern and responsive **Weather App** built with **React**, **Vite**, and **Tailwind CSS**.  
 It allows users to search weather by city, use their current location, view the **current weather**, **5-day forecast**, **sunrise/sunset timings**, and enjoy a **dynamic background that changes based on weather conditions**.
 
+---
+
+## Live Demo
+
+```bash
+https://your-live-demo-link.com
+
 Features
 
 Search weather by city name
@@ -27,7 +34,8 @@ Run Locally
 
 Start the development server:
 npm run dev
-
+Then open the local URL shown in the terminal.
+=======================================================================
 
 ## Live Demo
 https://weather-app-pi-three-67.vercel.app/
